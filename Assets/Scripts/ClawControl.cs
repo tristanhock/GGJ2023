@@ -16,6 +16,19 @@ public class ClawControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            
+        }
     }
 }
