@@ -5,8 +5,8 @@ using UnityEngine;
 public class ClawControl : MonoBehaviour
 {
     private bool _up, _down;
-    private bool _open, _close;
-
+    private bool _close;
+    public bool _open;
     private bool _left, _right;
 
     Rigidbody2D _rclaw, _lclaw;
@@ -84,9 +84,26 @@ public class ClawControl : MonoBehaviour
         {
             Debug.Log("_lclaw" + _lclaw.transform.eulerAngles);
             Debug.Log("_rclaw" + _rclaw.transform.eulerAngles);
-            if (_lclaw.transform.eulerAngles.z <0)
+            if (_lclaw.transform.eulerAngles.z > 350)
             {
-                //_lclaw.
+                _lclaw.transform.Rotate(0,0,.1f);
+            }
+            if(_lclaw.transform.eulerAngles.z < 10)
+            {
+                _lclaw.transform.Rotate(0,0,1f);
+            }
+
+            if (_open)
+            {
+                if (_rclaw.transform.eulerAngles.z > 350)
+                {
+                    _rclaw.transform.Rotate(0, 0, .1f);
+                }
+
+                if (_rclaw.transform.eulerAngles.z < 10)
+                {
+                    _rclaw.transform.Rotate(0, 0, 1f);
+                }
             }
         }
     }
