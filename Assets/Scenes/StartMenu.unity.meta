@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/StartMenu.unity.meta
 guid: 0ff48425193024e40a47cc1a98c4c25f
+========
+guid: b837a78dacbea554b8b5a3062d11f1cf
+>>>>>>>> 3b8d4045420d825a7ef0d2f0eb30dcc1e69d320d:Assets/Scenes/Game Over.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

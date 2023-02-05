@@ -5,12 +5,17 @@ using UnityEngine;
 public class ClawControl : MonoBehaviour
 {
     private bool _up, _down;
+    private bool _open, _close;
 
-    private bool _left, _right; 
+    private bool _left, _right;
+
+    Rigidbody2D _rclaw, _lclaw;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _rclaw = GameObject.Find("right claw").GetComponent<Rigidbody2D>();
+        _lclaw = GameObject.Find("left claw").GetComponent<Rigidbody2D>();
+        _open = false;
     }
 
     // Update is called once per frame
@@ -57,22 +62,32 @@ public class ClawControl : MonoBehaviour
 
         if (_up)
         {
-            gameObject.transform.Translate(0,-1f, 0);
+            gameObject.transform.Translate(0,-0.1f, 0);
         }
 
         if (_down)
         {
-            gameObject.transform.Translate(0, 1f,0);
+            gameObject.transform.Translate(0, 0.1f,0);
         }
 
         if (_right)
         {
-            gameObject.transform.Translate(0.3f, 0,0);
+            gameObject.transform.Translate(0.1f, 0,0);
         }
 
         if (_left)
         {
-            gameObject.transform.Translate(-0.3f, 0,0);
+            gameObject.transform.Translate(-0.1f, 0,0);
+        }
+
+        if (_open)
+        {
+            Debug.Log("_lclaw" + _lclaw.transform.eulerAngles);
+            Debug.Log("_rclaw" + _rclaw.transform.eulerAngles);
+            if (_lclaw.transform.eulerAngles.z <0)
+            {
+                //_lclaw.
+            }
         }
     }
 }
