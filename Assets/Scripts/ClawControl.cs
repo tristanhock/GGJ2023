@@ -86,8 +86,7 @@ public class ClawControl : MonoBehaviour
 
         if (_open)
         {
-            Debug.Log("_lclaw" + _lclaw.transform.eulerAngles);
-            Debug.Log("_rclaw" + _rclaw.transform.eulerAngles);
+            
             if (_lclaw.transform.eulerAngles.z > 300)
             {
                 _lclaw.transform.Rotate(0,0,1f);
@@ -97,14 +96,14 @@ public class ClawControl : MonoBehaviour
                 _lclaw.transform.Rotate(0,0,1f);
             }
 
-            if (_open)
+            if (!_open)
             {
-                if (_rclaw.transform.eulerAngles.z > 10)
+                if (_rclaw.transform.eulerAngles.z > 300)
                 {
                     _rclaw.transform.Rotate(0, 0, -1f);
                 }
 
-                if (_rclaw.transform.eulerAngles.z < 350)
+                if (_rclaw.transform.eulerAngles.z < 60)
                 {
                     _rclaw.transform.Rotate(0, 0, 1f);
                 }
