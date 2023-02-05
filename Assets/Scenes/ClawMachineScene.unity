@@ -1098,6 +1098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 971130501}
+  - component: {fileID: 971130502}
   - component: {fileID: 971130500}
   m_Layer: 0
   m_Name: win box
@@ -1173,6 +1174,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &971130502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971130499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189171c449d09bc44bd01391df59c7e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toy: {fileID: 0}
 --- !u!1 &982512365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1483280086}
+  - component: {fileID: 1483280087}
   m_Layer: 0
   m_Name: Full Claw
   m_TagString: Untagged
@@ -1588,6 +1603,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1483280087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483280085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefc5537845b9694aaa7d29eba2f088e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1519378669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,6 +1708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1627705470}
+  - component: {fileID: 1627705471}
   - component: {fileID: 1627705469}
   m_Layer: 0
   m_Name: stick
@@ -1756,6 +1784,18 @@ Transform:
   m_Father: {fileID: 1483280086}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1627705471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627705468}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefc5537845b9694aaa7d29eba2f088e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1705508832
 GameObject:
   m_ObjectHideFlags: 0
