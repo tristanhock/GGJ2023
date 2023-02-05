@@ -59,48 +59,52 @@ public class ClawControl : MonoBehaviour
         {
             _right = false; 
         }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            _open = !_open; 
+        }
 
         if (_up)
         {
-            gameObject.transform.Translate(0,-0.1f, 0);
+            gameObject.transform.Translate(0,-0.01f, 0);
         }
 
         if (_down)
         {
-            gameObject.transform.Translate(0, 0.1f,0);
+            gameObject.transform.Translate(0, 0.01f,0);
         }
 
         if (_right)
         {
-            gameObject.transform.Translate(0.1f, 0,0);
+            gameObject.transform.Translate(0.01f, 0,0);
         }
 
         if (_left)
         {
-            gameObject.transform.Translate(-0.1f, 0,0);
+            gameObject.transform.Translate(-0.01f, 0,0);
         }
 
         if (_open)
         {
             Debug.Log("_lclaw" + _lclaw.transform.eulerAngles);
             Debug.Log("_rclaw" + _rclaw.transform.eulerAngles);
-            if (_lclaw.transform.eulerAngles.z > 350)
+            if (_lclaw.transform.eulerAngles.z > 300)
             {
-                _lclaw.transform.Rotate(0,0,.1f);
+                _lclaw.transform.Rotate(0,0,1f);
             }
-            if(_lclaw.transform.eulerAngles.z < 10)
+            if(_lclaw.transform.eulerAngles.z < 60)
             {
                 _lclaw.transform.Rotate(0,0,1f);
             }
 
             if (_open)
             {
-                if (_rclaw.transform.eulerAngles.z > 350)
+                if (_rclaw.transform.eulerAngles.z > 10)
                 {
-                    _rclaw.transform.Rotate(0, 0, .1f);
+                    _rclaw.transform.Rotate(0, 0, -1f);
                 }
 
-                if (_rclaw.transform.eulerAngles.z < 10)
+                if (_rclaw.transform.eulerAngles.z < 350)
                 {
                     _rclaw.transform.Rotate(0, 0, 1f);
                 }
