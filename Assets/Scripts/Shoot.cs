@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
+    public GameObject _toy;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,6 @@ public class Shoot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(Collision.gameObject);
+       // Destroy(Collision.gameObject);
     }
 }
