@@ -15,4 +15,10 @@ public class Shoot : MonoBehaviour
     {
         
     }
+    void OnCollisionEnter (Collision targetObj) {
+        if(targetObj.gameObject.tag == "Resistance")
+        {
+            Destroy(targetObj.gameObject);
+        }
+    }
 }
